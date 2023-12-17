@@ -3,3 +3,6 @@ A Docker version of the [FOSHKPlugin](https://wiki.loxberry.de/plugins/foshkplug
 You have to mount you own config in the container:
 
 `docker run -d --tmpfs /opt/FOSHKplugin/log -v ./config/foshkplugin.conf:/opt/FOSHKplugin/foshkplugin.conf --publish 8080:8080 --name foshkplugin zurajm/foshkplugin:latest`
+
+Additional info
+- `logfile` is set to `/dev/stdout` in the `foshkplugin.conf` to enable Docker native logging.
